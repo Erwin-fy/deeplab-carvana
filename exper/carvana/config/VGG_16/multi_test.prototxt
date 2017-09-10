@@ -23,7 +23,6 @@ layer {
     root_folder: "${DATA_ROOT}"
     source: "${EXP}/list/${TEST_SET}.txt"
     batch_size: 1
-    shuffle: true
     # label_type: PIXEL
     label_type: NONE
   }
