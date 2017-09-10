@@ -1,0 +1,77 @@
+In file included from ./include/caffe/util/device_alternate.hpp:40:0,
+                 from ./include/caffe/common.hpp:19,
+                 from ./include/caffe/blob.hpp:8,
+                 from ./include/caffe/layer.hpp:8,
+                 from src/caffe/layer_factory.cpp:8:
+./include/caffe/util/cudnn.hpp: In function ‘void caffe::cudnn::createPoolingDesc(cudnnPoolingStruct**, caffe::PoolingParameter_PoolMethod, cudnnPoolingMode_t*, int, int, int, int, int, int)’:
+./include/caffe/util/cudnn.hpp:127:41: error: too few arguments to function ‘cudnnStatus_t cudnnSetPooling2dDescriptor(cudnnPoolingDescriptor_t, cudnnPoolingMode_t, cudnnNanPropagation_t, int, int, int, int, int, int)’
+         pad_h, pad_w, stride_h, stride_w));
+                                         ^
+./include/caffe/util/cudnn.hpp:15:28: note: in definition of macro ‘CUDNN_CHECK’
+     cudnnStatus_t status = condition; \
+                            ^
+In file included from ./include/caffe/util/cudnn.hpp:5:0,
+                 from ./include/caffe/util/device_alternate.hpp:40,
+                 from ./include/caffe/common.hpp:19,
+                 from ./include/caffe/blob.hpp:8,
+                 from ./include/caffe/layer.hpp:8,
+                 from src/caffe/layer_factory.cpp:8:
+/usr/local/cuda-8.0//include/cudnn.h:803:27: note: declared here
+ cudnnStatus_t CUDNNWINAPI cudnnSetPooling2dDescriptor(
+                           ^
+src/caffe/layer_factory.cpp: In function ‘boost::shared_ptr<caffe::Layer<Dtype> > caffe::GetTanHLayer(const caffe::LayerParameter&) [with Dtype = double]’:
+src/caffe/layer_factory.cpp:237:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+src/caffe/layer_factory.cpp: In function ‘boost::shared_ptr<caffe::Layer<Dtype> > caffe::GetTanHLayer(const caffe::LayerParameter&) [with Dtype = float]’:
+src/caffe/layer_factory.cpp:237:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+src/caffe/layer_factory.cpp: In function ‘boost::shared_ptr<caffe::Layer<Dtype> > caffe::GetSoftmaxLayer(const caffe::LayerParameter&) [with Dtype = double]’:
+src/caffe/layer_factory.cpp:214:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+src/caffe/layer_factory.cpp: In function ‘boost::shared_ptr<caffe::Layer<Dtype> > caffe::GetSoftmaxLayer(const caffe::LayerParameter&) [with Dtype = float]’:
+src/caffe/layer_factory.cpp:214:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+src/caffe/layer_factory.cpp: In function ‘boost::shared_ptr<caffe::Layer<Dtype> > caffe::GetSigmoidLayer(const caffe::LayerParameter&) [with Dtype = double]’:
+src/caffe/layer_factory.cpp:191:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+src/caffe/layer_factory.cpp: In function ‘boost::shared_ptr<caffe::Layer<Dtype> > caffe::GetSigmoidLayer(const caffe::LayerParameter&) [with Dtype = float]’:
+src/caffe/layer_factory.cpp:191:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+src/caffe/layer_factory.cpp: In function ‘boost::shared_ptr<caffe::Layer<Dtype> > caffe::GetReLULayer(const caffe::LayerParameter&) [with Dtype = double]’:
+src/caffe/layer_factory.cpp:168:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+src/caffe/layer_factory.cpp: In function ‘boost::shared_ptr<caffe::Layer<Dtype> > caffe::GetReLULayer(const caffe::LayerParameter&) [with Dtype = float]’:
+src/caffe/layer_factory.cpp:168:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+src/caffe/layer_factory.cpp: In function ‘boost::shared_ptr<caffe::Layer<Dtype> > caffe::GetLRNLayer(const caffe::LayerParameter&) [with Dtype = double]’:
+src/caffe/layer_factory.cpp:145:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+src/caffe/layer_factory.cpp: In function ‘boost::shared_ptr<caffe::Layer<Dtype> > caffe::GetLRNLayer(const caffe::LayerParameter&) [with Dtype = float]’:
+src/caffe/layer_factory.cpp:145:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+src/caffe/layer_factory.cpp: In function ‘boost::shared_ptr<caffe::Layer<Dtype> > caffe::GetPoolingLayer(const caffe::LayerParameter&) [with Dtype = double]’:
+src/caffe/layer_factory.cpp:108:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+src/caffe/layer_factory.cpp: In function ‘boost::shared_ptr<caffe::Layer<Dtype> > caffe::GetPoolingLayer(const caffe::LayerParameter&) [with Dtype = float]’:
+src/caffe/layer_factory.cpp:108:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+src/caffe/layer_factory.cpp: In function ‘boost::shared_ptr<caffe::Layer<Dtype> > caffe::GetConvolutionLayer(const caffe::LayerParameter&) [with Dtype = double]’:
+src/caffe/layer_factory.cpp:71:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+src/caffe/layer_factory.cpp: In function ‘boost::shared_ptr<caffe::Layer<Dtype> > caffe::GetConvolutionLayer(const caffe::LayerParameter&) [with Dtype = float]’:
+src/caffe/layer_factory.cpp:71:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
