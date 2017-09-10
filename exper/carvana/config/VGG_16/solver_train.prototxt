@@ -1,0 +1,15 @@
+train_net: "montgomery/config/VGG_16/train_train.prototxt"
+
+lr_policy: "poly"
+power: 0.9
+base_lr: 1e-3
+
+average_loss: 20
+display: 20
+max_iter: 10000
+momentum: 0.9
+weight_decay: 0.0005
+
+snapshot: 100
+snapshot_prefix: "montgomery/model/VGG_16/train"
+solver_mode: GPU

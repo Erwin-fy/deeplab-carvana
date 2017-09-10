@@ -1,0 +1,15 @@
+train_net: "carvana/config/VGG_16/multi_train_train.prototxt"
+
+lr_policy: "poly"
+power: 0.9
+base_lr: 1e-5
+
+average_loss: 20
+display: 20
+max_iter: 56000
+momentum: 0.9
+weight_decay: 0.0005
+
+snapshot: 10000
+snapshot_prefix: "carvana/model/VGG_16/multi_train_705/multi_train"
+solver_mode: GPU
