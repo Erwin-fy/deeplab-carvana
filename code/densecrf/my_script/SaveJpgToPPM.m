@@ -2,7 +2,7 @@
 %
 is_server = 1;
 
-dataset = 'coco';  %'coco', 'voc2012'
+dataset = 'carvana';  %'coco', 'voc2012'
 
 if is_server
   if strcmp(dataset, 'voc2012')
@@ -11,6 +11,9 @@ if is_server
   elseif strcmp(dataset, 'coco')
     img_folder  = '/rmt/data/coco/JPEGImages';
     save_folder = '/rmt/data/coco/PPMImages';
+  elseif strcmp(dataset, 'carvana')
+    img_folder = '/home/liguanbin/wangfuyu/Carvana/test_hq/JPEGImages_large'
+    save_folder = '/home/liguanbin/wangfuyu/Carvana/test_hq/JPEGImages'
   end
 else
   img_folder = '../img';
@@ -28,7 +31,9 @@ for i = 1 : numel(img_dir)
     img = imread(fullfile(img_folder, img_dir(i).name));
     
     img_fn = img_dir(i).name(1:end-4);
-    save_fn = fullfile(save_folder, [img_fn, '.ppm']);
+    img = imresize(img, [961, 1441], 'bilinear');
+    save_fn = fullfile(save_folder, [img_fn, '.jpg']);
+    %save_fn = fullfile(save_folder, [img_fn, '.ppm']);
     
     imwrite(img, save_fn);   
 end
